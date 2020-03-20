@@ -11,6 +11,7 @@ cp /mnt/server/server-skyblock-egg/settings.ini .
 cp /mnt/server/server-skyblock-egg/webadmin.ini .
 
 cd Plugins
+rm -r SkyBlock
 git clone https://github.com/Seadragon91/SkyBlock.git
 cd SkyBlock
 git checkout rework
