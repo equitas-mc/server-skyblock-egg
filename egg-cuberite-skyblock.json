@@ -16,7 +16,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n# Cuberite\r\n#\r\n# Server Files: \/mnt\/server\r\napt update\r\napt install -y wget git\r\n\r\ncd \/mnt\/server\r\n\r\nwget https:\/\/builds.cuberite.org\/job\/Cuberite%20Linux%20x64%20Master\/lastSuccessfulBuild\/artifact\/Cuberite.tar.gz\r\n\r\ntar -xf Cuberite.tar.gz\r\n\r\necho \"New Version <---------------------\"\r\n\r\ncd Plugins\r\ngit clone https:\/\/github.com\/Seadragon91\/SkyBlock.git\r\ncd SkyBlock\r\ngit checkout rework",
+            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y git\r\n\r\ncd \/mnt\/server\r\n\r\ngit clone https:\/\/github.com\/equitas-mc\/server-skyblock-egg.git\r\ncd server-skyblock-egg\r\n./setup.sh",
             "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
