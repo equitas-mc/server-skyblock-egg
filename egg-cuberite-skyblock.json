@@ -26,7 +26,7 @@
             "name": "Server Description",
             "description": "Server Description",
             "env_variable": "SERV_DESC",
-            "default_value": "Cuberite on Pterodactyl!",
+            "default_value": "Cuberite on Pterodactyl",
             "user_viewable": 1,
             "user_editable": 1,
             "rules": "nullable|string"
