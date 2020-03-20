@@ -16,7 +16,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y git\r\n\r\ncd \/mnt\/server\r\n\r\ngit clone https:\/\/github.com\/equitas-mc\/server-skyblock-egg.git\r\ncd server-skyblock-egg\r\n./setup.sh",
+            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y git\r\n\r\ncd \/mnt\/server\r\n\r\nrm -r server-skyblock-egg\r\ngit clone https:\/\/github.com\/equitas-mc\/server-skyblock-egg.git\r\ncd server-skyblock-egg\r\n./setup.sh",
             "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
