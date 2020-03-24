@@ -15,4 +15,4 @@ cd Plugins
 rm -r SkyBlock
 git clone https://github.com/Seadragon91/SkyBlock.git
 cd SkyBlock
-git checkout rework
+git checkout cbdd6cf7ed51f118630a11f9a568c011900f87ff
