@@ -10,7 +10,7 @@ cat Ranks.sql | sqlite3 /mnt/server/Ranks.sqlite
 cd /mnt/server
 
 rm Cuberite.tar.gz
-wget https://builds.cuberite.org/job/Cuberite%20Linux%20x64%20Master/lastSuccessfulBuild/artifact/Cuberite.tar.gz
+wget https://download.cuberite.org/linux-x86_64/Cuberite.tar.gz
 tar -xf Cuberite.tar.gz
 
 cp /mnt/server/server-skyblock-egg/settings.ini .
