@@ -1,0 +1,6 @@
+[submodule "module-cuberite-egg"]
+	path = module-cuberite-egg
+	url = https://github.com/equitas-mc/module-cuberite-egg.git
+[submodule "SkyBlock"]
+	path = SkyBlock
+	url = https://github.com/Seadragon91/SkyBlock.git
