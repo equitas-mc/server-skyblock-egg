@@ -4,3 +4,6 @@
 [submodule "SkyBlock"]
 	path = SkyBlock
 	url = https://github.com/Seadragon91/SkyBlock.git
+[submodule "BlockInteractions"]
+	path = BlockInteractions
+	url = https://github.com/KrystilizeNevaDies/BlockInteractions.git

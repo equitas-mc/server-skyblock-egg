@@ -7,16 +7,16 @@
     "author": "tooangel@tooangel.de",
     "description": "Cuberite with skyblock plugin",
     "image": "quay.io\/parkervcp\/pterodactyl-images:base_debian",
-    "startup": ".\/Cuberite",
+    "startup": "cd Cuberite && .\/Cuberite",
     "config": {
-        "files": "{\r\n    \"settings.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"Server.Ports\": \"{{server.build.default.port}}\",\r\n            \"Server.Description\": \"{{server.build.env.SERV_DESC}}\",\r\n            \"Authenticate\": 0,\r\n            \"AllowBungeeCord\": 1\r\n        }\r\n    },\r\n    \"webadmin.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"User:admin.Password\": \"{{server.build.env.ADMIN_PASS}}\",\r\n            \"WebAdmin.Ports\": \"{{server.build.env.WEB_PORT}}\"\r\n        }\r\n    }\r\n}",
+        "files": "{\r\n    \"webadmin.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"User:admin.Password\": \"{{server.build.env.ADMIN_PASS}}\",\r\n            \"WebAdmin.Ports\": \"{{server.build.env.WEB_PORT}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"Startup complete\"\r\n}",
         "logs": "{}",
         "stop": "stop"
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y git\r\n\r\ncd \/mnt\/server\r\n\r\nrm -r server-skyblock-egg\r\ngit clone --recursive https:\/\/github.com\/equitas-mc\/server-skyblock-egg.git server-egg\r\n./server-egg/setup.sh",
+            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y git\r\n\r\ncd \/mnt\/server\r\n\r\nrm -rf server-egg\r\ngit clone --recursive https:\/\/github.com\/equitas-mc\/server-skyblock-egg.git server-egg\r\n./server-egg/setup.sh",
             "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
@@ -26,7 +26,7 @@
             "name": "Server Description",
             "description": "Server Description",
             "env_variable": "SERV_DESC",
-            "default_value": "Cuberite on Pterodactyl",
+            "default_value": "Cuberite on Pterodactyl!",
             "user_viewable": 1,
             "user_editable": 1,
             "rules": "nullable|string"
