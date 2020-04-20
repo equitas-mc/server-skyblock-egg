@@ -18,3 +18,9 @@ ln -s ../../server-egg/BlockInteractions Cuberite/Plugins/BlockInteractions
 
 # Update permissions, allow skyblock.command for default rank
 sqlite3 Cuberite/Ranks.sqlite "INSERT INTO PermissionItem (PermGroupID, permission) SELECT 1, 'skyblock.command' WHERE NOT EXISTS (SELECT 1 FROM PermissionItem WHERE PermGroupID = 1 AND permission = 'skyblock.command');"
+
+echo "
+#*******************************************************#
+# Custom Crafts
+LapisLazuli, 3    = IronIngot, * | GoldIngot, *
+StoneBrick, 4   = Cobblestone,  1:1, 1:2, 2:1, 2:2" >> Cuberite/crafting.txt
